@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'ARMExportTutorial'
     location: 'Central US'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/elshorbagy/ArMTestRepo/main/azuredeploy.json?token=GHSAT0AAAAAABULYFSGK2HJ4PJTFMEDTPUWYTY57PQ'
+    csmFileLink: 'https://raw.githubusercontent.com/elshorbagy/ArMTestRepo/main/azuredeploy.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
