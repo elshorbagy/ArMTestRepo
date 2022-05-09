@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureRmPipeline-conn'
+    subscriptionId: 'd83b6f90-bd06-43c4-af98-237c7ba6610b'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ARMExportTutorial'
+    location: 'Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/elshorbagy/ArMTestRepo/main/azuredeploy.json?token=GHSAT0AAAAAABULYFSGK2HJ4PJTFMEDTPUWYTY57PQ'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
