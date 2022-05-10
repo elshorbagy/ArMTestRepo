@@ -26,8 +26,8 @@
     }
   },
   "variables": {
-    "storageAccountName": "durablefunction202204110",
-    "webAppName": "[concat(parameters('projectName'), 'WebApp')]",
+    "storageAccountName": "armstorage223344zyx",
+    "webAppName": "[concat(parameters('projectName'), 'yxzWebApp')]",
     "appServicePlanName": "[concat(parameters('projectName'), 'Plan')]"
   },
   "resources": [
