@@ -12,7 +12,7 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "DefaultResourceGroup-SCUS",
+      "defaultValue": "[resourceGroup().location]",
       "metadata": {
         "description": "Specify a location for the resources."
       }
@@ -26,7 +26,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "durablefunction202204110",
+    "storageAccountName": "[concat(parameters('projectName'), uniqueString(resourceGroup().id))]",
     "webAppName": "[concat(parameters('projectName'), 'WebApp')]",
     "appServicePlanName": "[concat(parameters('projectName'), 'Plan')]"
   },
